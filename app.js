@@ -2,7 +2,7 @@ var app = require('express')()
     , server = require('http').createServer(app)
     , spawn = require('child_process').spawn;
 
-server.listen(3000);
+server.listen(8084);
 
 app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html');
