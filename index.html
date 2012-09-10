@@ -25,7 +25,7 @@
                 $.getJSON('/df', function(data) {
                     $.each(data, function(key, val) {
                         if($.inArray(val[5], mounts) > -1) {
-                            $('#diskstat').append('<div class="disk" id="disk'+key+'" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASSURBVChTY2BY9IJhFA+aMAAA6ymZ6bc/eEIAAAAASUVORK5CYII=); background-size: '+val[4]+',auto; background-repeat:no-repeat;">'+val[5]+'<br/>Size: '+val[1]+'<br/>Used: '+val[2]+'<br/>Free: '+val[3]+'</div>');
+                            $('#diskstat').append('<div class="disk" id="disk'+key+'" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASSURBVChTY2BY9IJhFA+aMAAA6ymZ6bc/eEIAAAAASUVORK5CYII=); background-size: '+val[4]+',auto; background-repeat:no-repeat;">'+val[5]+'<br/>'+val[4]+'<br/>Size: '+val[1]+'<br/>Used: '+val[2]+'<br/>Free: '+val[3]+'</div>');
                         }
                     });
                 });
